@@ -74,6 +74,10 @@ class _PetHomePageState extends State<PetHomePage> {
             onPressed: _feedPet,
             child: Text("Feed Pet"),
           ),
+          ElevatedButton(
+            onPressed: _playWithPet,
+            child: Text("Play with Pet"),
+          ),
         ],
       ),
     );
