@@ -70,6 +70,10 @@ class _PetHomePageState extends State<PetHomePage> {
           Text("Happiness: $happiness", style: TextStyle(fontSize: 20)),
           Text("Hunger: $hunger", style: TextStyle(fontSize: 20)),
           SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: _feedPet,
+            child: Text("Feed Pet"),
+          ),
         ],
       ),
     );
