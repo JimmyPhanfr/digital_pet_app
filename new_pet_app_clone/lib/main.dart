@@ -6,6 +6,8 @@ void main() {
 }
 
 class DigitalPetApp extends StatelessWidget {
+  const DigitalPetApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,6 +18,8 @@ class DigitalPetApp extends StatelessWidget {
 }
 
 class PetHomePage extends StatefulWidget {
+  const PetHomePage({super.key});
+
   @override
   _PetHomePageState createState() => _PetHomePageState();
 }
@@ -54,6 +58,13 @@ class _PetHomePageState extends State<PetHomePage> {
     });
   }
 
+  void _resetStats() {
+    setState(() {
+      happiness = 50;
+      hunger = 50;
+    });
+  }
+
   @override
   void dispose() {
     _timer?.cancel();
@@ -77,6 +88,10 @@ class _PetHomePageState extends State<PetHomePage> {
           ElevatedButton(
             onPressed: _playWithPet,
             child: Text("Play with Pet"),
+          ),
+          ElevatedButton(
+            onPressed: _resetStats,
+            child: Text("Reset All"),
           ),
         ],
       ),
